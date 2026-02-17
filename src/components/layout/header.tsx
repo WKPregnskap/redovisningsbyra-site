@@ -33,7 +33,8 @@ function unlockScrollState() {
 
 export function Header() {
   const pathname = usePathname();
-  const isHome = pathname === "/";
+  // endret: støtter både vanlig domene ("/") og GitHub Pages ("/redovisningsbyra-site") som forside-path.
+  const isHome = pathname === "/" || pathname === "/redovisningsbyra-site";
   // Deterministic initial state avoids SSR/client attribute drift during hydration.
   const [activeSection, setActiveSection] = useState("hero");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
