@@ -1,4 +1,7 @@
 import Image from "next/image";
+import henningImage from "../../../public/team/henrik.svg";
+import raymondImage from "../../../public/team/silje.svg";
+import henrikImage from "../../../public/team/marius.svg";
 
 type TeamCardsProps = {
   id?: string;
@@ -7,6 +10,12 @@ type TeamCardsProps = {
   people: ReadonlyArray<{ image: string; name: string; role: string; bio: string }>;
   altBackground?: boolean;
 };
+
+const teamImageMap = {
+  "/team/henrik.svg": henningImage,
+  "/team/silje.svg": raymondImage,
+  "/team/marius.svg": henrikImage,
+} as const;
 
 export function TeamCards({ id, title, lead, people, altBackground = false }: TeamCardsProps) {
   return (
@@ -20,7 +29,8 @@ export function TeamCards({ id, title, lead, people, altBackground = false }: Te
           {people.map((person) => (
             <article key={person.name} className="surface-card p-6">
               <Image
-                src={person.image}
+                // endret: statisk mapping sikrer at teambilder fungerer på GitHub Pages/basePath.
+                src={teamImageMap[person.image as keyof typeof teamImageMap] ?? person.image}
                 alt={person.name}
                 width={720}
                 height={420}

@@ -3,6 +3,13 @@ import { TrackedAnchor } from "@/components/ui/tracked-anchor";
 import { CookieSettingsButton } from "@/components/ui/cookie-settings-button";
 
 export function Footer() {
+  const mapsQuery = siteConfig.address
+    ? encodeURIComponent(
+        `${siteConfig.address.street}, ${siteConfig.address.postalCode} ${siteConfig.address.city}, ${siteConfig.address.country}`,
+      )
+    : "";
+  const mapsUrl = mapsQuery ? `https://www.google.com/maps/search/?api=1&query=${mapsQuery}` : "";
+
   return (
     <footer className="border-t border-slate-200 bg-slate-50">
       <div className="mx-auto grid w-full max-w-6xl gap-8 px-4 py-14 md:grid-cols-3 lg:px-8">
@@ -51,8 +58,25 @@ export function Footer() {
 
         <div>
           <h3 className="text-base font-semibold text-slate-900">Kart</h3>
-          <div className="mt-3 rounded-2xl border border-dashed border-slate-300 bg-white p-6 text-sm text-slate-500">
-            Google Maps plassholder
+          <div className="mt-3 rounded-2xl border border-slate-200 bg-white p-6 text-sm text-slate-600">
+            {/* endret: viser faktisk adresse med direkte lenke til Google Maps. */}
+            {siteConfig.address ? (
+              <>
+                <p>
+                  {siteConfig.address.street}, {siteConfig.address.postalCode} {siteConfig.address.city}
+                </p>
+                <a
+                  href={mapsUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-3 inline-flex text-sm font-semibold text-slate-900 underline underline-offset-4"
+                >
+                  Åpne i Google Maps
+                </a>
+              </>
+            ) : (
+              <p>Adresse kommer</p>
+            )}
           </div>
           <div className="mt-4">
             {/* endret: gjør det mulig å endre samtykke i ettertid fra footer. */}

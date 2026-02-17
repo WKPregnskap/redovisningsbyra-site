@@ -16,7 +16,6 @@ type NavItem = {
 const navItems: NavItem[] = [
   { href: "/#hero", label: "Hjem", sectionId: "hero" },
   { href: "/#tjenester", label: "Tjenester", sectionId: "tjenester" },
-  { href: "/#fastpris", label: "Fastpris", sectionId: "fastpris" },
   // endret: Om oss skal hoppe til team-seksjonen på forsiden.
   { href: "/#om-oss-scroll", label: "Om oss", sectionId: "om-oss-scroll" },
   // endret: referanser og kontakt går inn i samme scrollflyt på forsiden.

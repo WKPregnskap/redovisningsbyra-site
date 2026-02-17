@@ -3,7 +3,6 @@ import { homeFlow } from "@/content/pages/home";
 import { Hero } from "@/components/sections/hero";
 import { SectionCards } from "@/components/sections/section-cards";
 import { ServicesGrid } from "@/components/sections/services-grid";
-import { SimpleSection } from "@/components/sections/simple-section";
 import { ContactBand } from "@/components/sections/contact-band";
 import { ReferencesGrid } from "@/components/sections/references-grid";
 import { TeamCards } from "@/components/sections/team-cards";
@@ -55,21 +54,7 @@ export default function HomePage() {
         items={homeFlow.sections.process.items}
       />
 
-      {/* 5) Pricing */}
-      <SimpleSection
-        id={homeFlow.sections.pricing.id}
-        title={homeFlow.sections.pricing.title}
-        body={homeFlow.sections.pricing.body}
-        altBackground
-      />
-
-      {/* Conversion block directly after pricing. */}
-      <ContactBand
-        title="Ønsker du en fastpris som er lett å planlegge etter?"
-        text="Ta kontakt, så setter vi opp et tydelig forslag tilpasset virksomheten din."
-      />
-
-      {/* 6) About */}
+      {/* 5) About */}
       <TeamCards
         id={homeFlow.sections.about.id}
         title={homeFlow.sections.about.title}
@@ -78,14 +63,14 @@ export default function HomePage() {
         altBackground
       />
 
-      {/* 7) References in the same scroll flow as all other home sections. */}
+      {/* 6) References in the same scroll flow as all other home sections. */}
       <ReferencesGrid
         id={homeFlow.sections.references.id}
         title={homeFlow.sections.references.title}
         lead={homeFlow.sections.references.lead}
       />
 
-      {/* 8) Contact after references in the same one-page flow. */}
+      {/* 7) Contact after references in the same one-page flow. */}
       <ContactBand
         id={homeFlow.sections.contact.id}
         title={homeFlow.sections.contact.title}

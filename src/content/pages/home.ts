@@ -5,7 +5,7 @@ export const homeFlow = {
     summary: "Personlig rådgivning for bedrifter i hele Norge",
     trustPoints: [
       "Autorisert regnskapsfører",
-      "Fastpris",
+      "Tydelig oppfølging",
       "Personlig rådgivning",
       "Tilgjengelig i hele Norge",
     ],
@@ -24,8 +24,8 @@ export const homeFlow = {
           body: "Vi leverer oppdaterte rapporter med forklaringer i klart språk. Du ser hva som påvirker lønnsomhet og likviditet, og hva som bør gjøres videre.",
         },
         {
-          title: "Fastpris med tydelig innhold",
-          body: "Avtalen beskriver hva som er inkludert, hvordan samarbeidet fungerer og hvem som har ansvar for hva. Du vet hva du betaler for, hver måned.",
+          title: "Tydelig leveranse",
+          body: "Samarbeidet beskriver hva som er inkludert, hvordan arbeidsflyten fungerer og hvem som har ansvar for hva.",
         },
       ],
     },
@@ -71,7 +71,7 @@ export const homeFlow = {
       items: [
         {
           title: "1. Kartlegging",
-          body: "Vi går gjennom dagens situasjon, behov og mål. Deretter får du et tydelig forslag til leveranse og fastpris.",
+          body: "Vi går gjennom dagens situasjon, behov og mål. Deretter får du et tydelig forslag til leveranse.",
         },
         {
           title: "2. Onboarding",
@@ -82,11 +82,6 @@ export const homeFlow = {
           body: "Du får faste leveranser, tilgjengelig rådgiver og konkrete anbefalinger basert på oppdaterte tall.",
         },
       ],
-    },
-    pricing: {
-      id: "fastpris",
-      title: "Fastpris som gir ro i økonomien",
-      body: "Fastpris gir forutsigbarhet i budsjettet og tydelige forventninger i samarbeidet. Vi avklarer leveranseomfang i forkant, følger opp gjennom faste rutiner og justerer avtalen når behovet endrer seg. Ingen overraskelser, bare tydelig oppfølging.",
     },
     about: {
       id: "om-oss-scroll",
