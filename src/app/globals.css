@@ -33,6 +33,13 @@ section[id] {
   scroll-margin-top: 110px;
 }
 
+/* endret: fjerner blå fokus-ramme på programmerat seksjonsfokus etter menyklikk */
+h1[tabindex="-1"]:focus,
+h2[tabindex="-1"]:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 body {
   font-family: "Avenir Next", "Satoshi", "Nunito Sans", "Segoe UI", sans-serif;
   background:
