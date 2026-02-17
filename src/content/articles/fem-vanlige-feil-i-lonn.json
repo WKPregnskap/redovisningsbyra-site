@@ -1,0 +1,24 @@
+{
+  "slug": "fem-vanlige-feil-i-lonn",
+  "title": "Fem vanlige feil i lønnskjøring og hvordan du unngår dem",
+  "excerpt": "Lønn feilregistreres ofte på de samme punktene. Her er de viktigste tiltakene.",
+  "category": "Lønn",
+  "status": "published",
+  "publishedAt": "2025-12-04",
+  "updatedAt": "2026-01-10",
+  "seoTitle": "Fem lønnsfeil bedrifter bør unngå",
+  "seoDescription": "Praktisk guide til tryggere lønnskjøring med færre feil og bedre internkontroll.",
+  "readingMinutes": 5,
+  "author": "Marius Hovland",
+  "content": "## 1. Manglende kontroll av variable tillegg\nOvertid, bonus og tillegg bør kvalitetssikres før hver kjøring. Små feil kan bli kostbare over tid.\n\n## 2. Svak dokumentasjon\nNår fravær, refusjoner og trekk ikke dokumenteres godt nok, blir både internkontroll og revisjon vanskeligere.\n\n## 3. For sen avstemming\nLønn bør avstemmes fortløpende mot regnskapet. Da oppdages avvik raskt, før de vokser.\n\n## 4. Uklare ansvarsforhold\nDefiner tydelig hvem som registrerer, hvem som godkjenner og hvem som kvalitetssikrer.\n\n## 5. Ingen fast rutine ved månedsslutt\nBruk en enkel sjekkliste hver måned. Det reduserer risiko og gir bedre forutsigbarhet.",
+  "faq": [
+    {
+      "question": "Hvor ofte bør lønnsprosessen gjennomgås?",
+      "answer": "Minst kvartalsvis, og alltid ved organisatoriske endringer."
+    },
+    {
+      "question": "Må vi ha ekstern hjelp?",
+      "answer": "Ikke alltid, men ekstern kvalitetssikring gir ofte høyere trygghet og lavere feilrate."
+    }
+  ]
+}

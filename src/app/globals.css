@@ -1,0 +1,385 @@
+@import "tailwindcss";
+
+/* Global rhythm tokens for responsive typography and 8px-based spacing. */
+:root {
+  --text-hero: clamp(2.25rem, 5vw, 3.5rem);
+  --text-section: clamp(1.75rem, 3vw, 2.125rem);
+  --text-body: clamp(1rem, 1.15vw, 1.125rem);
+  --text-small: 0.875rem;
+  --space-section-mobile: clamp(3rem, 8vw, 4.5rem);
+  --space-section-desktop: clamp(5rem, 8vw, 7.5rem);
+  /* endret: chip-tokens for pilleformet badge-stil med lys outline pa mork bakgrunn */
+  --chip-font-size: 14px;
+  --chip-padding-y: 8px;
+  --chip-padding-x: 18px;
+  --chip-border-radius: 999px;
+  --chip-border-width: 1.4px;
+  --chip-border-color: rgb(255 255 255 / 22%);
+  --chip-text-color: rgb(255 255 255 / 95%);
+  --chip-bg: rgb(255 255 255 / 2%);
+  --chip-gap: 12px;
+  --chip-shadow: 0 6px 18px rgb(2 8 23 / 6%);
+  --chip-transition: 180ms cubic-bezier(0.2, 0.9, 0.2, 1);
+  /* endret: felles hover-lift for alle CTA-knapper */
+  --btn-hover-shadow: 0 8px 16px rgb(15 23 42 / 12%);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* endret: sikrer at intern lenkenavigasjon stopper riktig under sticky header, ikke nederst i seksjon */
+section[id] {
+  scroll-margin-top: 110px;
+}
+
+body {
+  font-family: "Avenir Next", "Satoshi", "Nunito Sans", "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at 0% 0%, #f8fbff 0%, transparent 32%),
+    radial-gradient(circle at 100% 0%, #f3f7ff 0%, transparent 35%), #f8fafc;
+  color: #0f172a;
+  line-height: 1.55;
+}
+
+::selection {
+  background: #cbd5e1;
+  color: #0f172a;
+}
+
+/* Shared width guard so text never runs edge-to-edge. */
+.section-wrap {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 76rem;
+  padding-inline: 1rem;
+}
+
+/* Section spacing system with mobile/desktop rhythm. */
+.section-pad-y {
+  padding-block: var(--space-section-mobile);
+}
+
+@media (min-width: 1024px) {
+  .section-pad-y {
+    padding-block: var(--space-section-desktop);
+  }
+}
+
+.hero-title {
+  font-size: var(--text-hero);
+  line-height: 1.08;
+  max-width: 18ch;
+  margin-inline: auto;
+}
+
+.section-title {
+  font-size: var(--text-section);
+  line-height: 1.18;
+  max-width: 24ch;
+}
+
+.body-text {
+  font-size: var(--text-body);
+  line-height: 1.6;
+  max-width: 68ch;
+}
+
+.small-text {
+  font-size: var(--text-small);
+  line-height: 1.45;
+}
+
+.header-logo {
+  background: transparent;
+}
+
+.header-logo__img {
+  /* endret: logo-fix med transparent bakgrunn, mindre høyde og roligere padding */
+  background: transparent;
+  height: 48px;
+  width: auto;
+  display: block;
+  padding: 6px 10px;
+}
+
+@media (max-width: 640px) {
+  .header-logo__img {
+    height: 42px;
+    padding: 5px 8px;
+  }
+}
+
+/* Unified surface style to keep a calm Nordic card language. */
+.surface-card {
+  border: 1px solid rgb(226 232 240);
+  border-radius: 1.25rem;
+  background: white;
+  box-shadow: 0 10px 24px rgb(15 23 42 / 6%);
+}
+
+/* Reusable CTA hierarchy: primary > secondary > ghost. */
+/* Button scale toned down for a calmer professional hero presence. */
+.btn-primary,
+.btn-secondary,
+.btn-secondary-light,
+.btn-tertiary,
+.btn-tertiary-light,
+.btn-ghost-light {
+  /* endret: felles interaksjonssystem slik at alle knapper oppfører seg likt ved hover/fokus */
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-secondary-light:hover,
+.btn-tertiary:hover,
+.btn-tertiary-light:hover,
+.btn-ghost-light:hover,
+.btn-primary:focus-visible,
+.btn-secondary:focus-visible,
+.btn-secondary-light:focus-visible,
+.btn-tertiary:focus-visible,
+.btn-tertiary-light:focus-visible,
+.btn-ghost-light:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: var(--btn-hover-shadow);
+  outline: none;
+}
+
+.btn-primary:active,
+.btn-secondary:active,
+.btn-secondary-light:active,
+.btn-tertiary:active,
+.btn-tertiary-light:active,
+.btn-ghost-light:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #0f172a;
+  color: white;
+  font-size: clamp(0.95rem, 1.2vw, 1.125rem);
+  font-weight: 600;
+  padding: 0.75rem 1.75rem;
+}
+
+.btn-primary:hover {
+  background: #1e293b;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  border: 1px solid rgb(148 163 184);
+  background: white;
+  color: #0f172a;
+  font-size: clamp(0.95rem, 1.2vw, 1.125rem);
+  font-weight: 600;
+  padding: 0.75rem 1.75rem;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
+  /* endret: tydelig hover/fokus-respons for "Ring meg" på lyse flater */
+  background: #f8fafc;
+  border-color: rgb(100 116 139);
+}
+
+.btn-secondary-light {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  border: 1px solid rgb(191 219 254 / 70%);
+  color: white;
+  font-size: clamp(0.95rem, 1.2vw, 1.125rem);
+  font-weight: 600;
+  padding: 0.75rem 1.75rem;
+}
+
+.btn-secondary-light:hover,
+.btn-secondary-light:focus-visible {
+  /* endret: tydelig hover/fokus-respons for "Ring meg" i hero på mørk bakgrunn */
+  background: rgb(255 255 255 / 10%);
+  border-color: rgb(255 255 255 / 90%);
+}
+
+.btn-tertiary {
+  /* endret: tertiær CTA på lyse flater (unngår hvit tekst på hvit bakgrunn) */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  border: 1px solid rgb(148 163 184 / 65%);
+  background: rgb(255 255 255 / 90%);
+  color: #0f172a;
+  font-size: clamp(0.95rem, 1.2vw, 1.125rem);
+  font-weight: 500;
+  padding: 0.75rem 1.75rem;
+}
+
+.btn-tertiary:hover {
+  background: white;
+}
+
+.btn-tertiary-light {
+  /* endret: egen tertiær variant for mørk hero-bakgrunn */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  border: 1px solid rgb(226 232 240 / 45%);
+  background: rgb(255 255 255 / 14%);
+  color: #f8fafc;
+  font-size: clamp(0.95rem, 1.2vw, 1.125rem);
+  font-weight: 500;
+  padding: 0.75rem 1.75rem;
+}
+
+.btn-tertiary-light:hover {
+  background: rgb(255 255 255 / 22%);
+}
+
+.btn-ghost-light {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  color: #e2e8f0;
+  font-size: clamp(0.95rem, 1.2vw, 1.125rem);
+  font-weight: 600;
+  padding: 0.75rem 1.75rem;
+}
+
+.btn-ghost-light:hover,
+.btn-ghost-light:focus-visible {
+  /* endret: gir også ghost-knappen synlig interaksjon */
+  background: rgb(255 255 255 / 10%);
+}
+
+.hero-badges,
+.chips {
+  /* forbedret hero-badges: inline, sentrert og med wrap kun ved liten bredde */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--chip-gap);
+  max-width: 980px;
+  margin: 20px auto 0;
+  padding: 0 20px;
+}
+
+.hero-badges > li,
+.chips > li {
+  /* endret: li skal aldri oppføre seg som blokk/full-bredde */
+  list-style: none;
+  width: auto;
+  flex: 0 0 auto;
+}
+
+.chip,
+.badge-light {
+  /* forbedret hero-badges: kompakte piller med auto-bredde */
+  display: inline-flex;
+  width: auto;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 10px;
+  padding: var(--chip-padding-y) var(--chip-padding-x);
+  font-size: var(--chip-font-size);
+  font-weight: 600;
+  line-height: 1;
+  color: var(--chip-text-color);
+  background: var(--chip-bg);
+  border-radius: var(--chip-border-radius);
+  border: var(--chip-border-width) solid var(--chip-border-color);
+  box-shadow: none;
+  white-space: nowrap;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition:
+    transform var(--chip-transition),
+    box-shadow var(--chip-transition),
+    background var(--chip-transition),
+    border-color var(--chip-transition);
+}
+
+.chip:hover,
+.chip:focus,
+.badge-light:hover,
+.badge-light:focus {
+  /* forbedret hero-badges: subtil hover/fokus uten dominerende effekt */
+  transform: translateY(-3px);
+  box-shadow: var(--chip-shadow);
+  border-color: rgb(255 255 255 / 30%);
+  background: rgb(255 255 255 / 3%);
+  outline: none;
+}
+
+.chip:focus-visible,
+.badge-light:focus-visible {
+  /* endret: tydelig keyboard-fokus for tilgjengelighet */
+  box-shadow:
+    0 0 0 2px rgb(15 98 136 / 50%),
+    var(--chip-shadow);
+}
+
+.chip:active,
+.badge-light:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.chip__icon {
+  /* forbedret hero-badges: linjeikoner i near-white for mørk teal bakgrunn */
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  opacity: 0.98;
+  display: inline-block;
+  vertical-align: middle;
+  fill: none;
+  stroke: rgb(255 255 255 / 95%);
+  stroke-width: 1.6;
+}
+
+@media (max-width: 640px) {
+  .chip,
+  .badge-light {
+    gap: 8px;
+  }
+
+  .chip__icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 540px) {
+  :root {
+    /* forbedret hero-badges: mindre mobilskalering for kompakt layout */
+    --chip-font-size: 13px;
+    --chip-padding-y: 6px;
+    --chip-padding-x: 14px;
+    --chip-gap: 8px;
+  }
+
+  .chip__icon {
+    width: 16px;
+    height: 16px;
+  }
+}
