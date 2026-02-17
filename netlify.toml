@@ -1,0 +1,10 @@
+[build]
+  # endret: tvinger Netlify til riktig static-export bygg for Next.js-prosjektet.
+  command = "npm run build"
+  publish = "out"
+
+[build.environment]
+  # endret: låser Node-versjon for stabil Next.js 16-build på Netlify.
+  NODE_VERSION = "22"
+  # endret: deaktiverer Netlify Next-runtime fordi prosjektet bygges som ren statisk export til /out.
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
