@@ -33,8 +33,8 @@ function unlockScrollState() {
 
 export function Header() {
   const pathname = usePathname();
-  // endret: støtter både vanlig domene ("/") og GitHub Pages ("/redovisningsbyra-site") som forside-path.
-  const isHome = pathname === "/" || pathname === "/redovisningsbyra-site";
+  // endret: støtter alle forside-varianter (med/uten trailing slash) for korrekt aktiv-farge ved scroll.
+  const isHome = pathname === "/" || pathname.startsWith("/redovisningsbyra-site");
   // Deterministic initial state avoids SSR/client attribute drift during hydration.
   const [activeSection, setActiveSection] = useState("hero");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
