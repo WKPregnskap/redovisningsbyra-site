@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import logoImage from "../../../public/wk-logo.png";
+import logoImage from "../../../public/wk-logo-header.svg";
 
 type NavItem = {
   href: string;
@@ -141,7 +141,7 @@ export function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200 bg-slate-50/95 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-slate-200 bg-slate-50">
       {/* Single-row header: logo + nav + optional utility (subpages) to remove duplicate menu rows. */}
       <div className="mx-auto flex w-full max-w-7xl items-center gap-4 px-4 py-3 lg:px-8">
         {/* Logo container uses transparent background and dedicated sizing class. */}
