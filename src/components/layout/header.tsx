@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import logoImage from "../../../public/wk-logo.png";
 
 type NavItem = {
   href: string;
@@ -146,7 +147,8 @@ export function Header() {
         {/* Logo container uses transparent background and dedicated sizing class. */}
         <Link href="/" className="header-logo inline-flex shrink-0 items-center rounded-sm">
           <Image
-            src="/wk-logo.png"
+            // endret: statisk import gjør logo-path robust på både GitHub Pages (basePath) og vanlig domene.
+            src={logoImage}
             alt="Werner Klausen Regnskap"
             width={3117}
             height={421}
