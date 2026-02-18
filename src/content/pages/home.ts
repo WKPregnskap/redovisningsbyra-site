@@ -96,7 +96,8 @@ export const homeFlow = {
     contact: {
       id: "kontakt",
       title: "Klar for en tryggere økonomihverdag?",
-      body: "Ring oss nå, be om oppringing eller send e-post. Vi svarer raskt og gir en konkret anbefaling basert på bedriftens behov.",
+      // endret: kortere CTA-tekst slik at knapperekken får bedre plass på én linje.
+      body: "Ring oss nå, be om oppringing eller send e-post. Vi svarer raskt med et konkret forslag.",
     },
   },
 } as const;
