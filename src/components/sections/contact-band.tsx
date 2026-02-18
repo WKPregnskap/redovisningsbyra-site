@@ -1,14 +1,22 @@
 import { siteConfig } from "@/config/site";
 import { TrackedAnchor } from "@/components/ui/tracked-anchor";
+import { CallbackModal } from "@/components/sections/callback-modal";
 
 type ContactBandProps = {
   id?: string;
   title: string;
   text: string;
   altBackground?: boolean;
+  showCallback?: boolean;
 };
 
-export function ContactBand({ id, title, text, altBackground = false }: ContactBandProps) {
+export function ContactBand({
+  id,
+  title,
+  text,
+  altBackground = false,
+  showCallback = false,
+}: ContactBandProps) {
   return (
     <section id={id} className={`section-pad-y ${altBackground ? "bg-slate-100/70" : "bg-white"}`}>
       {/* CTA band reused across service/pricing/end-of-page conversion points. */}
@@ -27,6 +35,8 @@ export function ContactBand({ id, title, text, altBackground = false }: ContactB
             >
               Ring oss
             </TrackedAnchor>
+            {/* endret: valgfri callback-knapp for sider som trenger komplett CTA-hierarki. */}
+            {showCallback ? <CallbackModal buttonLabel="Ring meg" buttonClassName="btn-secondary" /> : null}
             <TrackedAnchor
               href={`mailto:${siteConfig.email}`}
               eventName="email_click"

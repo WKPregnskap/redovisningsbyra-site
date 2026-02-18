@@ -89,7 +89,7 @@ export function Hero({ data }: HeroProps) {
         </div>
 
         {/* forbedret hero-badges: sentrert inline-rad, dekorative chips med role=list/listitem. */}
-        <div className="hero-badges" role="list" aria-label="Förtroendepunkter">
+        <div className="hero-badges" role="list" aria-label="Tillitspunkter">
           {data.trustPoints.map((point) => (
             <span key={point} className="chip" role="listitem">
               <TrustPointIcon label={point} />

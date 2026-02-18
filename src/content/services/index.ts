@@ -14,7 +14,7 @@ export const servicePages: ServicePageData[] = [
     summary:
       "Vi fører regnskapet løpende, avstemmer sentrale kontoer og sikrer at rapporteringen er korrekt og oppdatert.",
     intro:
-      "Bokføring er grunnmuren i økonomistyringen. Når bokføringen er oppdatert og kvalitetssikret, blir det enklere å ta riktige beslutninger og møte frister uten stress.",
+      "Bokføring er grunnmuren i økonomistyringen. Når bokføringen er oppdatert og kontrollert, blir det enklere å ta riktige beslutninger og møte frister uten stress.",
     longDescription:
       "Vi etablerer en arbeidsflyt som passer virksomheten din, med tydelige frister for bilag, kontrollpunkter og rapportering. Vi følger opp avvik tidlig og sørger for at regnskapet gir et riktig bilde av drift, kostnader og lønnsomhet. Du får månedlige leveranser i et språk som er lett å bruke i ledelsen.",
     customerGets: [
@@ -31,7 +31,7 @@ export const servicePages: ServicePageData[] = [
     ],
     fitFor: [
       "Bedrifter som vil ha oppdaterte tall hver måned",
-      "Selskaper som trenger trygg kvalitet i grunnregnskapet",
+      "Selskaper som trenger trygg kontroll i grunnregnskapet",
       "Virksomheter som ønsker mindre intern administrasjon",
     ],
     bullets: [
@@ -69,16 +69,16 @@ export const servicePages: ServicePageData[] = [
     seo: {
       title: "Lønnstjenester med trygg gjennomføring",
       description:
-        "Vi håndterer lønn med kvalitet, kontroll på frister og tydelig oppfølging av ansatte og ledelse.",
+        "Vi håndterer lønn med faste rutiner, kontroll på frister og tydelig oppfølging av ansatte og ledelse.",
       canonicalPath: "/tjanster/lonn",
       h1: "Lønn",
     },
     summary:
       "Trygg lønnskjøring med kontroll på variable tillegg, fravær, trekk, refusjoner og myndighetsrapportering.",
     intro:
-      "Lønn må være korrekt hver gang. Vi sørger for en trygg lønnsprosess med tydelige rutiner, kvalitetssikring og tilgjengelig rådgivning.",
+      "Lønn må være korrekt hver gang. Vi sørger for en trygg lønnsprosess med tydelige rutiner, kontroll og tilgjengelig rådgivning.",
     longDescription:
-      "Vi setter opp en fast lønnskalender med frister for grunnlag, kontroll og utbetaling. Variabler som overtid, bonus, fravær og refusjoner kvalitetssikres før kjøring. I tillegg bistår vi med spørsmål om personaldata, rapportering og praktisk håndtering av lønnsrelaterte avklaringer.",
+      "Vi setter opp en fast lønnskalender med frister for grunnlag, kontroll og utbetaling. Variabler som overtid, bonus, fravær og refusjoner gjennomgås før kjøring. I tillegg bistår vi med spørsmål om personaldata, rapportering og praktisk håndtering av lønnsrelaterte avklaringer.",
     customerGets: [
       "Fast lønnskjøring med dokumentert kontroll",
       "Oppfølging av fravær, refusjoner og variable tillegg",
@@ -88,7 +88,7 @@ export const servicePages: ServicePageData[] = [
     process: [
       "Vi kartlegger dagens lønnsrutiner og frister",
       "Vi etablerer lønnskalender og innsendingsfrister",
-      "Vi gjennomfører lønnskjøring med kvalitetskontroll",
+      "Vi gjennomfører lønnskjøring med fast kontroll",
       "Vi følger opp avvik og forbedrer prosessen løpende",
     ],
     fitFor: [
@@ -138,12 +138,12 @@ export const servicePages: ServicePageData[] = [
     summary:
       "Vi hjelper deg med rutiner for fakturering, oppfølging av utestående og bedre forutsigbarhet i kontantstrømmen.",
     intro:
-      "God fakturering handler både om tempo og kvalitet. Når faktura sendes riktig og i tide, blir kontantstrømmen mer stabil.",
+      "God fakturering handler både om tempo og kontroll. Når faktura sendes riktig og i tide, blir kontantstrømmen mer stabil.",
     longDescription:
-      "Vi etablerer en faktureringsprosess med tydelig ansvarsfordeling, faste tidspunkter og kvalitetssikring av grunnlag. Videre setter vi opp oppfølging av forfall og avklaringer rundt kreditnota, korrigering og dokumentasjon. Målet er raskere innbetalinger og mindre administrativt arbeid.",
+      "Vi etablerer en faktureringsprosess med tydelig ansvarsfordeling, faste tidspunkter og kontroll av grunnlag. Videre setter vi opp oppfølging av forfall og avklaringer rundt kreditnota, korrigering og dokumentasjon. Målet er raskere innbetalinger og mindre administrativt arbeid.",
     customerGets: [
       "Strukturert faktureringsprosess med faste frister",
-      "Kvalitetssikring av fakturagrunnlag før utsendelse",
+      "Kontroll av fakturagrunnlag før utsendelse",
       "Oppfølging av utestående og forfall",
       "Bedre oversikt over kontantstrøm og innbetalinger",
     ],
@@ -180,6 +180,11 @@ export const servicePages: ServicePageData[] = [
         answer:
           "Ja, vi sikrer at fakturaflyten henger sammen med regnskap og rapportering.",
       },
+      {
+        question: "Hvor raskt kan vi komme i gang?",
+        answer:
+          "Vi avtaler oppstart med en gang og setter opp en enkel plan for de første ukene.",
+      },
     ],
     relatedGuides: ["regnskapssystem-valg", "digital-bilagshandtering"],
   },
@@ -188,19 +193,19 @@ export const servicePages: ServicePageData[] = [
     seo: {
       title: "Årsoppgjør med tydelig fremdrift",
       description:
-        "Vi gjennomfører årsoppgjør med kvalitet, struktur og trygg rapportering.",
+        "Vi gjennomfører årsoppgjør med tydelig fremdrift, struktur og trygg rapportering.",
       canonicalPath: "/tjanster/arsoppgjor",
       h1: "Årsoppgjør",
     },
     summary:
-      "Vi planlegger og gjennomfører årsoppgjøret med tydelig fremdrift, kvalitetssikring og gode avklaringer underveis.",
+      "Vi planlegger og gjennomfører årsoppgjøret med tydelig fremdrift, kontroll av grunnlag og gode avklaringer underveis.",
     intro:
       "Årsoppgjør blir enklere når grunnarbeidet er godt. Vi sørger for plan, struktur og fremdrift som gir trygg levering.",
     longDescription:
-      "Gjennom året følger vi opp avstemming og dokumentasjon slik at årsoppgjøret blir effektivt. I årsoppgjørsfasen gjennomgår vi regnskap, vurderinger og nødvendige avklaringer med deg før innsending. Du får tydelig status underveis og en prosess som er lett å forholde seg til.",
+      "Gjennom året følger vi opp avstemming og dokumentasjon slik at årsoppgjøret går smidig. I årsoppgjørsfasen gjennomgår vi regnskap, vurderinger og nødvendige avklaringer med deg før innsending. Du får tydelig status underveis og en prosess som er lett å forholde seg til.",
     customerGets: [
       "Planlagt fremdrift med tydelige milepæler",
-      "Kvalitetssikret grunnlag før innsending",
+      "Kontrollert grunnlag før innsending",
       "Avklaringer i forkant for å redusere risiko",
       "Trygg håndtering av skattemelding og årsavslutning",
     ],
@@ -217,7 +222,7 @@ export const servicePages: ServicePageData[] = [
     ],
     bullets: [
       "Tydelig plan og fremdrift",
-      "God kvalitet i grunnlaget",
+      "God kontroll i grunnlaget",
       "Trygg og strukturert innsending",
     ],
     ctaText: "Ring oss for en trygg plan for neste årsoppgjør.",
@@ -236,6 +241,11 @@ export const servicePages: ServicePageData[] = [
         question: "Får vi oversikt over hva som gjenstår?",
         answer:
           "Ja, du får tydelig status på fremdrift og neste steg gjennom hele prosessen.",
+      },
+      {
+        question: "Kan dere bistå hvis vi ligger bakpå?",
+        answer:
+          "Ja, vi prioriterer det viktigste først og lager en konkret plan for å komme ajour.",
       },
     ],
     relatedGuides: ["arsoppgjor-guide", "skattefradrag-smabedrift"],
@@ -294,6 +304,11 @@ export const servicePages: ServicePageData[] = [
         answer:
           "Ja, rådgivning kan inngå i en fastprisstruktur med tydelig omfang.",
       },
+      {
+        question: "Hva får vi etter et rådgivningsmøte?",
+        answer:
+          "Du får en kort oppsummering med prioriterte tiltak og hva som bør gjøres først.",
+      },
     ],
     relatedGuides: ["hva-koster-regnskapsforer", "fastpris-regnskap-guide"],
   },
@@ -339,12 +354,12 @@ export const servicePages: ServicePageData[] = [
       {
         question: "Hvor lang tid tar et bytte av regnskapsfører?",
         answer:
-          "Tidsbruk avhenger av kompleksitet, men vi legger opp til en effektiv overgang med tydelig fremdrift.",
+          "Tidsbruk avhenger av kompleksitet, men vi legger opp til en smidig overgang med tydelig fremdrift.",
       },
       {
         question: "Mister vi historikk ved bytte?",
         answer:
-          "Nei, vi henter inn og kvalitetssikrer relevant historikk som del av overgangen.",
+          "Nei, vi henter inn og kontrollerer relevant historikk som del av overgangen.",
       },
       {
         question: "Kan dere hjelpe ved etablering av nytt AS?",
