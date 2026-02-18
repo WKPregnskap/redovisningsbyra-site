@@ -22,12 +22,13 @@ export function ContactBand({
     <section id={id} className={`section-pad-y ${altBackground ? "bg-slate-100/70" : "bg-white"}`}>
       {/* CTA band reused across service/pricing/end-of-page conversion points. */}
       <div className="section-wrap">
-        <div className="surface-card p-8 md:flex md:items-center md:justify-between md:gap-8 md:p-10">
+        <div className="surface-card p-8 md:p-10 lg:flex lg:items-center lg:justify-between lg:gap-8">
           <div>
             <h2 className="section-title text-slate-900">{title}</h2>
             <p className="body-text mt-3 text-slate-600">{text}</p>
           </div>
-          <div className="mt-6 flex flex-wrap gap-3 md:mt-0">
+          {/* endret: holder CTA-knapper på én rad fra desktop (lg) for ryddig kontaktseksjon. */}
+          <div className="mt-6 flex flex-wrap gap-3 lg:mt-0 lg:flex-nowrap lg:justify-end">
             <TrackedAnchor
               href={siteConfig.phoneHref}
               eventName="phone_click"
