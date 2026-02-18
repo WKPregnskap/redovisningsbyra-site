@@ -25,7 +25,8 @@ export function ContactBand({
         <div className="surface-card p-8 md:p-10 lg:flex lg:items-center lg:justify-between lg:gap-8">
           <div>
             <h2 className="section-title text-slate-900">{title}</h2>
-            <p className="body-text mt-3 text-slate-600">{text}</p>
+            {/* endret: støtter manuelle linjeskift i CTA-tekst for bedre layoutbalanse. */}
+            <p className="body-text mt-3 whitespace-pre-line text-slate-600">{text}</p>
           </div>
           {/* endret: holder CTA-knapper på én rad fra desktop (lg) for ryddig kontaktseksjon. */}
           <div className="mt-6 flex flex-wrap gap-3 lg:mt-0 lg:flex-nowrap lg:justify-end">
@@ -35,7 +36,7 @@ export function ContactBand({
               eventPayload={{ placement: "contact_band_phone" }}
               className="btn-primary"
             >
-              Ring oss
+              Ring oss nå
             </TrackedAnchor>
             {/* endret: valgfri callback-knapp for sider som trenger komplett CTA-hierarki. */}
             {showCallback ? <CallbackModal buttonLabel="Ring meg" buttonClassName="btn-secondary" /> : null}
