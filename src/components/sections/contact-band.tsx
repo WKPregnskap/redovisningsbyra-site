@@ -15,7 +15,8 @@ export function ContactBand({
   title,
   text,
   altBackground = false,
-  showCallback = false,
+  // endret: "Ring meg" vises som standard i alle CTA-blokker med knapper.
+  showCallback = true,
 }: ContactBandProps) {
   return (
     <section id={id} className={`section-pad-y ${altBackground ? "bg-slate-100/70" : "bg-white"}`}>
